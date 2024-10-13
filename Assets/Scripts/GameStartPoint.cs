@@ -9,6 +9,11 @@ public class GameStartPointTransition : MonoBehaviour
     {
         if (other.CompareTag("Player") && Input.GetKeyDown(KeyCode.Return))
         {
+            // Turn the mouse cursor on and unlock it
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+
+            // Load the specified scene
             SceneManager.LoadScene(sceneName);
         }
     }

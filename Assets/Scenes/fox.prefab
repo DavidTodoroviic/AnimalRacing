@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &6099874872321359916
+--- !u!1001 &6893565251684946593
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -26,7 +26,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 36f6d18409c0f2543abef65374f7cc55, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -8.119999
+      value: -8.01
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 36f6d18409c0f2543abef65374f7cc55, type: 3}
       propertyPath: m_LocalPosition.z
@@ -70,29 +70,29 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 36f6d18409c0f2543abef65374f7cc55, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 7165459946164720952}
+      addedObject: {fileID: 3130530373779335159}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 36f6d18409c0f2543abef65374f7cc55, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 5850394563322855459}
+      addedObject: {fileID: 91993517632238946}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 36f6d18409c0f2543abef65374f7cc55, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 3150193331413824959}
+      addedObject: {fileID: 5208544363623317217}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 36f6d18409c0f2543abef65374f7cc55, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 3127946672319582971}
+      addedObject: {fileID: 1822984315975076989}
   m_SourcePrefab: {fileID: 100100000, guid: 36f6d18409c0f2543abef65374f7cc55, type: 3}
---- !u!1 &6369904279335402877 stripped
+--- !u!1 &6011096879325343728 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 36f6d18409c0f2543abef65374f7cc55, type: 3}
-  m_PrefabInstance: {fileID: 6099874872321359916}
+  m_PrefabInstance: {fileID: 6893565251684946593}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &7165459946164720952
+--- !u!114 &3130530373779335159
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6369904279335402877}
+  m_GameObject: {fileID: 6011096879325343728}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 29185f208b345274cb1174dd1e00800f, type: 3}
@@ -108,13 +108,13 @@ MonoBehaviour:
   competitors:
   - {fileID: 0}
   - {fileID: 0}
---- !u!54 &5850394563322855459
+--- !u!54 &91993517632238946
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6369904279335402877}
+  m_GameObject: {fileID: 6011096879325343728}
   serializedVersion: 4
   m_Mass: 1
   m_Drag: 0
@@ -135,13 +135,13 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &3150193331413824959
+--- !u!114 &5208544363623317217
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6369904279335402877}
+  m_GameObject: {fileID: 6011096879325343728}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bf6010282aa6e6040bab4f09910be1eb, type: 3}
@@ -158,13 +158,13 @@ MonoBehaviour:
   isPlayerControlled: 0
   cameraTransform: {fileID: 0}
   terrainTag: Terrain
---- !u!64 &3127946672319582971
+--- !u!64 &1822984315975076989
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6369904279335402877}
+  m_GameObject: {fileID: 6011096879325343728}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2

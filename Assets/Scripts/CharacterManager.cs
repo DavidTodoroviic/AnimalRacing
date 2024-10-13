@@ -2,27 +2,49 @@ using UnityEngine;
 
 public class CharacterManager : MonoBehaviour
 {
+    public GameObject foxPrefab;
+
     void Start()
     {
-        int selectedCharacter = PlayerPrefs.GetInt("selectedCharacter");
-
-        // Find the character GameObjects in the scene
+        int selectedCharacter = PlayerPrefs.GetInt("selectedCharacter", 0);
+        
         GameObject bear = GameObject.Find("BlackBear");
         GameObject gorilla = GameObject.Find("Gorilla_01");
-        GameObject fox = GameObject.Find("fox");
+        GameObject fox = null;
 
-        // Set isPlayerControlled based on selectedCharacter
-        if (bear != null && selectedCharacter == 0) // The index for Bear
+        if (selectedCharacter == 2)
         {
-            bear.GetComponent<AI>().isPlayerControlled = true;
+            if (foxPrefab != null)
+            {
+                fox = Instantiate(foxPrefab, transform.position, Quaternion.identity);
+            }
         }
-        else if (gorilla != null && selectedCharacter == 1) // The index for Gorilla
+
+        switch (selectedCharacter)
         {
-            gorilla.GetComponent<AI>().isPlayerControlled = true;
-        }
-        else if (fox != null && selectedCharacter == 2) // The index for Fox
-        {
-            fox.GetComponent<AI>().isPlayerControlled = true;
+            case 0:
+                if (bear != null)
+                {
+                    bear.GetComponent<AI>().isPlayerControlled = true;
+                }
+                break;
+
+            case 1:
+                if (gorilla != null)
+                {
+                    gorilla.GetComponent<AI>().isPlayerControlled = true;
+                }
+                break;
+
+            case 2:
+                if (fox != null)
+                {
+                    fox.GetComponent<AI>().isPlayerControlled = true;
+                }
+                break;
+
+            default:
+                break;
         }
     }
 }

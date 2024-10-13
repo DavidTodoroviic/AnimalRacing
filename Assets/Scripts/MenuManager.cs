@@ -13,21 +13,17 @@ public class MenuManager : MonoBehaviour
     {
         SceneManager.LoadScene("Credits");
     }
-
-    public void QuitGame()
+       public void LoadMenu()
     {
-        Application.Quit();
+        SceneManager.LoadScene("MainMenu");
     }
 
     public void LoadLobby()
     {
-        // Load the lobby scene
-        SceneManager.LoadScene("Lobby"); 
+        SceneManager.LoadScene("Lobby");
     }
-
-    public void LoadMainMenu()
+    public void QuitGame()
     {
-        // Load the main menu scene
-        SceneManager.LoadScene("MainMenu"); 
+        Application.Quit();
     }
 }

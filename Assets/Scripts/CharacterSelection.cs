@@ -50,8 +50,8 @@ public class CharacterSelection : MonoBehaviour
         PlayerPrefs.SetInt("selectedCharacter", selectedCharacter);
         SceneManager.LoadScene(4, LoadSceneMode.Single);
     }
-
-    public void StartGameRace()
+    
+    public void StartGameScene()
     {
         // Store the selected character index and load the next scene
         PlayerPrefs.SetInt("selectedCharacter", selectedCharacter);
