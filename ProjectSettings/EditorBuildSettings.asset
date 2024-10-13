@@ -22,14 +22,14 @@ EditorBuildSettings:
     guid: d4c867b60215b044b8de700122ca6db8
   - enabled: 1
     path: Assets/Scenes/AnimalSelectionScene.unity
-    guid: aedf3cc7b5f944d2eb8614998267822d
-  - enabled: 1
-    path: Assets/Scenes/GameStartScene.unity
-    guid: 6a8fe708b38474883a54680275b6c5cb
+    guid: 1053243d00bc6ab47b5d59e2b6781eb2
   - enabled: 1
     path: Assets/Scenes/Desert.unity
     guid: 2a49a3120ffd9104b9acfe98aeac7075
   - enabled: 1
     path: Assets/Scenes/Credits.unity
     guid: d030fdcb55fd0f541aa2c15a3b5ca0d2
+  - enabled: 1
+    path: Assets/Scenes/ResultsScene.unity
+    guid: ddde1e772a2b3b446bd66c55c23c0f38
   m_configObjects: {}

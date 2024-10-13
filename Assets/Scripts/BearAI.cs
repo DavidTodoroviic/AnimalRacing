@@ -12,19 +12,17 @@ public class BearRage : MonoBehaviour
     public float sizeMultiplier = 1.5f;         // Bear size multiplier during rage
 
     private float rage = 0f;                    // Current rage level (0 to 1)
-    private bool isRaging = false;              // Is the bear in rage mode
+    public bool isRaging = false;              // Is the bear in rage mode
 
     public Slider rageBar;                      // UI Slider for Rage Bar
     public Transform bearTransform;             // Reference to the bear's transform
 
     public List<GameObject> targetAnimals;      // List of specific animals to track
 
-    private BearMovement bearMovement;          // Reference to the bear's movement script
     private Vector3 originalSize;               // Original size of the bear
 
     void Start()
     {
-        bearMovement = GetComponent<BearMovement>();
         originalSize = bearTransform.localScale;
 
         rageBar.value = rage;                    // Initialize rage bar
@@ -51,7 +49,33 @@ public class BearRage : MonoBehaviour
             if (rage >= 1f)
             {
                 StartCoroutine(TriggerRageMode());
+                
+                // Find the closest animal within the radius and pause its position for 1 second
+                foreach (GameObject animal in targetAnimals)
+                    {
+                        if (animal != null && Vector3.Distance(transform.position, animal.transform.position) <= rageRadius)
+                    {
+                         StartCoroutine(PauseAnimal(animal, 1f));  // Pause the animal's position for 1 second
+                            break;
+                         }
+                     }
             }
+        }
+    }
+
+
+    private IEnumerator PauseAnimal(GameObject animal, float duration)
+    {
+    // Store the current position
+        Vector3 originalPosition = animal.transform.position;
+
+    // Keep the animal at the same position for the duration
+        float elapsedTime = 0f;
+        while (elapsedTime < duration)
+        {
+            animal.transform.position = originalPosition;  // Keep the position fixed
+            elapsedTime += Time.deltaTime;
+         yield return null;
         }
     }
 
@@ -61,13 +85,13 @@ public class BearRage : MonoBehaviour
 
         // Increase size and acceleration
         bearTransform.localScale = originalSize * sizeMultiplier;
-        bearMovement.acceleration += accelerationBoost;
 
         // Rage mode lasts for a limited time
         yield return new WaitForSeconds(rageBoostDuration);
 
         EndRageMode();
     }
+
 
     void EndRageMode()
     {
@@ -77,7 +101,6 @@ public class BearRage : MonoBehaviour
 
         // Return bear to original size and reset acceleration
         bearTransform.localScale = originalSize;
-        bearMovement.acceleration -= accelerationBoost;
     }
 
     // Optional: Draw the radius in the editor to visualize it

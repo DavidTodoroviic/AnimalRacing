@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class GameStartPointTransition : MonoBehaviour
 {
-    public string sceneName = "GameStartScene";
+    public string sceneName = "Desert";
 
     void OnTriggerStay(Collider other)
     {
