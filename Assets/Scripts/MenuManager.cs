@@ -18,4 +18,16 @@ public class MenuManager : MonoBehaviour
     {
         Application.Quit();
     }
+
+    public void LoadLobby()
+    {
+        // Load the lobby scene
+        SceneManager.LoadScene("Lobby"); 
+    }
+
+    public void LoadMainMenu()
+    {
+        // Load the main menu scene
+        SceneManager.LoadScene("MainMenu"); 
+    }
 }
